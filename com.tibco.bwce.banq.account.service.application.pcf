@@ -1,0 +1,3 @@
+postgres.credentials.DB_USERNAME: postgres
+postgres.credentials.DB_URL: jdbc:postgresql://ec2-52-211-214-9.eu-west-1.compute.amazonaws.com:5432/banq
+postgres.credentials.DB_PASSWORD: postgresadmin01
