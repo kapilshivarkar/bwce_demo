@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/com.tibco.bwce.banq.account.client1.module/Service Descriptors/com.tibco.bwce.banq.account.client1.module.Process-bankclient.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.example.org/AccountSchema"
+}]}

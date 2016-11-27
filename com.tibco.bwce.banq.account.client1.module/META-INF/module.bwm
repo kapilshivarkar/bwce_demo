@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_FQmJ0LTREeazO7qhjKziiA" targetNamespace="http://tns.tibco.com/bw/composite/com.tibco.bwce.banq.account.client1.module" name="com.tibco.bwce.banq.account.client1.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_T_NTULTREeazO7qhjKziiA" name="bankclient" promote="ComponentProcess/bankclient">
+    <sca:interface.wsdl xmi:id="_T_Y5gLTREeazO7qhjKziiA" interface="http://xmlns.example.com/20161127194118PLT#wsdl.interface(bankclient)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_T_kfsLTREeazO7qhjKziiA" name="RestService" path="/bankclient/{customerId}" docBasePath="http://localhost:7777/com.tibco.bwce.banq.account.client1.module" docResourcePath="bankclient" basePath="/" connector="com.tibco.bwce.banq.account.client1.module.bankclient" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.tibco.bwce.banq.account.client1.module.Process-bankclient.json">
+      <operation xmi:id="_T_mU4LTREeazO7qhjKziiA" operationName="get" nickname="get-bankclient" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_lh8KQLTREeazO7qhjKziiA">
+          <parameterMapping xmi:id="_lh8KQbTREeazO7qhjKziiA" parameterName="region" parameterType="Query" dataType="string"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_jW1koLTREeazO7qhjKziiA">
+        <parameterMapping xmi:id="_jW1kobTREeazO7qhjKziiA" parameterName="customerId" parameterType="Path" required="true"/>
+      </parameters>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_T_mU4bTREeazO7qhjKziiA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_Fwz68LTREeazO7qhjKziiA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Fw-TALTREeazO7qhjKziiA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FxDykLTREeazO7qhjKziiA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FxIrELTREeazO7qhjKziiA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FxOKoLTREeazO7qhjKziiA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FxTDILTREeazO7qhjKziiA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_FxX7oLTREeazO7qhjKziiA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_FeRZcLTREeazO7qhjKziiA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_FeRZcbTREeazO7qhjKziiA" processName="com.tibco.bwce.banq.account.client1.module.Process"/>
+    <sca:service xmi:id="_T_FXgLTREeazO7qhjKziiA" name="bankclient">
+      <sca:interface.wsdl xmi:id="_T_HzwLTREeazO7qhjKziiA" interface="http://xmlns.example.com/20161127194118PLT#wsdl.interface(bankclient)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
