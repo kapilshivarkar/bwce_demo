@@ -494,9 +494,7 @@
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
-                    eventTimeout="0" name="Start"
-                    tibex:xpdlId="78388f6d-5934-414e-a56f-0ad0db375cb0"
-                    variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    eventTimeout="0" name="Start" variable="Start">
                     <bpws:sources>
                         <bpws:source linkName="StartToCopy_1_JDBCQuery"/>
                     </bpws:sources>
@@ -509,8 +507,7 @@
                 <tibex:activityExtension
                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/GetCustomerSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Query-Customer&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:CustomerName>&lt;xsl:value-of select=&quot;$Query-Customer/Record[1]/custname&quot;/>&lt;/tns:CustomerName>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
-                    inputVariable="End-input" name="End"
-                    tibex:xpdlId="9ae7528c-bb7b-4462-867a-d343a6b43f77" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    inputVariable="End-input" name="End">
                     <bpws:targets>
                         <bpws:target linkName="Query-RegionToEnd"/>
                     </bpws:targets>
@@ -539,9 +536,7 @@
                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+6bf292b0-ddda-465d-b469-48d5fde7d945+input&quot; xmlns:tns1=&quot;http://www.example.org/GetCustomerSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Query-Customer-input&quot; match=&quot;/&quot;>&lt;tns:jdbcQueryActivityInput>&lt;custId>&lt;xsl:value-of select=&quot;$Start/tns1:id&quot;/>&lt;/custId>&lt;/tns:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                     inputVariable="Query-Customer-input"
-                    name="Query-Customer"
-                    outputVariable="Query-Customer"
-                    tibex:xpdlId="6bf292b0-ddda-465d-b469-48d5fde7d945" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="Query-Customer" outputVariable="Query-Customer">
                     <bpws:targets>
                         <bpws:target linkName="StartToCopy_1_JDBCQuery"/>
                     </bpws:targets>

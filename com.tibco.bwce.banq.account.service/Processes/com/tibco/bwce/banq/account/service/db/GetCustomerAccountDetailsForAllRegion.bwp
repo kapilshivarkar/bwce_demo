@@ -434,9 +434,7 @@
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
-                    eventTimeout="0" name="Start"
-                    tibex:xpdlId="78388f6d-5934-414e-a56f-0ad0db375cb0"
-                    variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    eventTimeout="0" name="Start" variable="Start">
                     <bpws:sources>
                         <bpws:source linkName="StartToEnd_Name">
                             <tibex:DesignExpression/>
@@ -451,8 +449,7 @@
                 <tibex:activityExtension
                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/GetCustomerSchema&quot; xmlns:tns1=&quot;http://www.example.org/AccountSchema&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Query-All&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns:CustomerAccountDetails>&lt;xsl:for-each select=&quot;$Query-All/Record&quot;>&lt;tns1:AccountDetails>&lt;tns1:AccountNumber>&lt;xsl:value-of select=&quot;accountnum&quot;/>&lt;/tns1:AccountNumber>&lt;tns1:Amount>&lt;xsl:value-of select=&quot;concat(if(lower-case(region) = &amp;quot;us&amp;quot;) then &amp;quot;$&amp;quot; else &amp;quot;£&amp;quot;, format-number(xsd:float(amount),&amp;quot;###,###.##&amp;quot;))&quot;/>&lt;/tns1:Amount>&lt;tns1:AccountType>&lt;xsl:value-of select=&quot;accounttype&quot;/>&lt;/tns1:AccountType>&lt;tns1:CountryName>&lt;xsl:value-of select=&quot;if(lower-case(region) = &amp;quot;us&amp;quot;) then &amp;quot;United States&amp;quot; else &amp;quot;United Kingdom&amp;quot;&quot;/>&lt;/tns1:CountryName>&lt;/tns1:AccountDetails>&lt;/xsl:for-each>&lt;/tns:CustomerAccountDetails>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
-                    inputVariable="End-input" name="End"
-                    tibex:xpdlId="9ae7528c-bb7b-4462-867a-d343a6b43f77" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    inputVariable="End-input" name="End">
                     <bpws:targets>
                         <bpws:target linkName="Query-AllToEnd"/>
                     </bpws:targets>
@@ -480,9 +477,7 @@
                 <tibex:activityExtension
                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+3691ac06-97d4-4a89-b1a1-93e0eb2376b9+input&quot; xmlns:tns1=&quot;http://www.example.org/GetCustomerSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Query-All-input&quot; match=&quot;/&quot;>&lt;tns:jdbcQueryActivityInput>&lt;custId>&lt;xsl:value-of select=&quot;$Start/tns1:id&quot;/>&lt;/custId>&lt;/tns:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
-                    inputVariable="Query-All-input" name="Query-All"
-                    outputVariable="Query-All"
-                    tibex:xpdlId="3691ac06-97d4-4a89-b1a1-93e0eb2376b9" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    inputVariable="Query-All-input" name="Query-All" outputVariable="Query-All">
                     <bpws:targets>
                         <bpws:target linkName="StartToEnd_Name"/>
                     </bpws:targets>
